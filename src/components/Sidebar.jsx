@@ -1,12 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import logoImg from '../assets/logo.png';
 
 const Sidebar = () => {
     const menuItems = [
         { name: 'HOME', path: '/' },
-        { name: 'STAFF', path: '/studio' },
-        { name: 'DISCIPLINE', path: '/servizi' },
+        { name: 'CHI SIAMO', path: '/chi-siamo' },
+        { name: 'STAFF', path: '/staff' },
         { name: 'TECNOLOGIA', path: '/tecnologia' },
+        { name: 'CURE', path: '/cure' },
         { name: 'STERILIZZAZIONE', path: '/sterilizzazione' },
         { name: 'ODONTOIATRIA PEDIATRICA', path: '/pedodonzia' },
         { name: 'CONVENZIONI', path: '/convenzioni' },
@@ -14,16 +16,16 @@ const Sidebar = () => {
     ];
 
     return (
-        <aside className="sidebar-container">
-            <div className="mb-10 px-4">
+        <aside className="sidebar-container pl-10">
+            <div className="mb-10 w-full flex justify-start pt-4">
                 <img
-                    src="http://www.studiomedicodentisticorossetti.com/IMG/marchio%20MEDIUM%20TONDO.jpg"
+                    src={logoImg}
                     alt="Logo Studio Rossetti"
-                    className="w-full h-auto max-w-[180px]"
+                    className="w-[240px] h-auto"
                 />
             </div>
 
-            <nav className="flex flex-col w-full px-4">
+            <nav className="flex flex-col w-full px-0">
                 {menuItems.map((item) => (
                     <NavLink
                         key={item.path}
