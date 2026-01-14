@@ -1,10 +1,15 @@
 import React from 'react';
 import ster1 from '../assets/imageSter1.png';
 import ster2 from '../assets/imageSter2.png';
+import SEO from '../components/SEO';
 
 const Sterilizzazione = () => {
     return (
         <div className="flex flex-col items-center p-8">
+            <SEO
+                title="Sterilizzazione"
+                description="La sicurezza dei pazienti è la nostra priorità. Scopri le rigorose procedure di sterilizzazione e igiene dello Studio Rossetti."
+            />
             <div className="max-w-[1400px] w-full">
                 {/* Header Bar with Gradient */}
                 <div className="w-full mb-12">

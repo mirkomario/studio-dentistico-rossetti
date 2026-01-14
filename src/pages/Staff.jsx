@@ -1,9 +1,14 @@
 import React from 'react';
 import staffImg from '../assets/imgstaffRitratto.png';
+import SEO from '../components/SEO';
 
 const Staff = () => {
     return (
         <div className="flex flex-col items-center p-8">
+            <SEO
+                title="Lo Staff"
+                description="Incontra il team dello Studio Dentistico Rossetti: odontoiatri esperti pronti a prendersi cura della tua salute orale a Milano."
+            />
             <div className="max-w-[1400px] w-full">
                 {/* Header Bar with Gradient */}
                 <div className="w-full mb-12">

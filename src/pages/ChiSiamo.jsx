@@ -1,9 +1,14 @@
 import React from 'react';
 import receptionImg from '../assets/imageReception.png';
+import SEO from '../components/SEO';
 
 const ChiSiamo = () => {
     return (
         <div className="flex flex-col items-center p-8">
+            <SEO
+                title="Chi Siamo"
+                description="Scopri la storia e la filosofia dello Studio Dentistico Rossetti a Milano. Dal 1985 al servizio del tuo sorriso con passione e competenza."
+            />
             <div className="max-w-[1400px] w-full">
                 {/* Header Bar with Gradient */}
                 <div className="w-full mb-12">

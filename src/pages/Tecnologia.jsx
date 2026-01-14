@@ -5,12 +5,17 @@ import tecn3 from '../assets/imageTecn3.png';
 import tecn4 from '../assets/imageTecn4.png';
 import tecn5 from '../assets/imageTecn5.png';
 import tecn6 from '../assets/imageTecn6.png';
+import SEO from '../components/SEO';
 
 const Tecnologia = () => {
     const techImages = [tecn1, tecn2, tecn3, tecn4, tecn5, tecn6];
 
     return (
         <div className="flex flex-col items-center p-8">
+            <SEO
+                title="Tecnologia"
+                description="Lo Studio Rossetti utilizza tecnologie all'avanguardia: scanner intraorali, impronte digitali e diagnosi 3D per la massima precisione."
+            />
             <div className="max-w-[1400px] w-full">
                 {/* Header Bar with Gradient */}
                 <div className="w-full mb-12">

@@ -1,5 +1,6 @@
 import React from 'react';
 import cureImg from '../assets/imageCure.png';
+import SEO from '../components/SEO';
 
 const Cure = () => {
     const disciplines = [
@@ -20,6 +21,10 @@ const Cure = () => {
 
     return (
         <div className="flex flex-col items-center p-8">
+            <SEO
+                title="Cure e Discipline"
+                description="Servizi dentistici completi a Milano: Chirurgia, Parodontologia, Implantologia, Ortodonzia invisibile e Medicina Estetica."
+            />
             <div className="max-w-[1400px] w-full">
                 {/* Header Bar with Gradient */}
                 <div className="w-full mb-12">

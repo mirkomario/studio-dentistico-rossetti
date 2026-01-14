@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, Train, Car, Info, Navigation } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Contatti = () => {
     const today = new Date().getDay(); // 0 = Sunday, 1 = Monday, etc.
@@ -13,6 +14,10 @@ const Contatti = () => {
 
     return (
         <div className="flex flex-col items-center min-h-full py-12 px-8 bg-gray-50/30">
+            <SEO
+                title="Contatti e Sede"
+                description="Contatta lo Studio Dentistico Rossetti a Milano: Via Poggibonsi 5. Telefono 02.4071446. Orari, mappa e indicazioni per raggiungerci con i mezzi pubblici."
+            />
             <div className="max-w-[1200px] w-full flex flex-col gap-8">
                 {/* Header Bar with Gradient style */}
                 <div className="w-full mb-4">
