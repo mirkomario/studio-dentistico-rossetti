@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
+import { Analytics } from '@vercel/analytics/react';
 import Home from './pages/Home';
 import Staff from './pages/Staff';
 import ChiSiamo from './pages/ChiSiamo';
@@ -16,6 +17,7 @@ import NotFound from './pages/NotFound';
 function App() {
   return (
     <div className="outer-frame">
+      <Analytics />
       <Sidebar />
       <main className="main-viewport">
         <Routes>
