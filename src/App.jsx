@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Home from './pages/Home';
 import Staff from './pages/Staff';
 import ChiSiamo from './pages/ChiSiamo';
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="outer-frame">
       <Analytics />
+      <SpeedInsights />
       <Sidebar />
       <main className="main-viewport">
         <Routes>
