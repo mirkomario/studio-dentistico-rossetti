@@ -2,15 +2,16 @@ import React from 'react';
 import ster1 from '../assets/imageSter1.png';
 import ster2 from '../assets/imageSter2.png';
 import SEO from '../components/SEO';
+import Footer from '../components/Footer';
 
 const Sterilizzazione = () => {
     return (
-        <div className="flex flex-col items-center p-8">
+        <div className="flex flex-col items-center p-8 min-h-full">
             <SEO
                 title="Sterilizzazione"
                 description="La sicurezza dei pazienti è la nostra priorità. Scopri le rigorose procedure di sterilizzazione e igiene dello Studio Rossetti."
             />
-            <div className="max-w-[1400px] w-full">
+            <div className="max-w-[1400px] w-full flex-grow">
                 {/* Header Bar with Gradient */}
                 <div className="w-full mb-12">
                     <div className="legacy-button !w-full !text-2xl !py-4 !px-10 cursor-default">
@@ -18,27 +19,27 @@ const Sterilizzazione = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row gap-12 items-stretch justify-center">
+                <div className="flex flex-col md:flex-row gap-12 items-start">
                     {/* Left Column: The 2 Images */}
                     <div className="md:w-[55%] grid grid-cols-2 gap-6">
-                        <div className="h-full overflow-hidden rounded-sm shadow-sm">
+                        <div className="overflow-hidden rounded-sm shadow-sm">
                             <img
                                 src={ster1}
                                 alt="Procedure Sterilizzazione 1"
-                                className="w-full h-full object-cover"
+                                className="w-full h-auto object-cover"
                             />
                         </div>
-                        <div className="h-full overflow-hidden rounded-sm shadow-sm">
+                        <div className="overflow-hidden rounded-sm shadow-sm">
                             <img
                                 src={ster2}
                                 alt="Procedure Sterilizzazione 2"
-                                className="w-full h-full object-cover"
+                                className="w-full h-auto object-cover"
                             />
                         </div>
                     </div>
 
                     {/* Right Column: Text in requested style */}
-                    <div className="md:w-[45%] flex flex-col justify-center">
+                    <div className="md:w-[45%] flex flex-col pt-2">
                         <h3 className="text-[#009EA9] text-3xl font-bold leading-tight mb-8 italic font-serif lowercase">
                             un punto importante<br />
                             nella gestione dello studio
@@ -73,6 +74,7 @@ const Sterilizzazione = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

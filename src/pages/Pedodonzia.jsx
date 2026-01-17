@@ -3,15 +3,16 @@ import ped1 from '../assets/imagePed1.png';
 import ped2 from '../assets/imagePed2.png';
 import ped3 from '../assets/imagePed3.png';
 import SEO from '../components/SEO';
+import Footer from '../components/Footer';
 
 const Pedodonzia = () => {
     return (
-        <div className="flex flex-col items-center p-8">
+        <div className="flex flex-col items-center p-8 min-h-full">
             <SEO
                 title="Odontoiatria Pediatrica"
                 description="Cure dentali per i più piccoli a Milano. Un ambiente sereno e accogliente per far sentire ogni bambino a proprio agio dal dentista."
             />
-            <div className="max-w-[1400px] w-full">
+            <div className="max-w-[1400px] w-full flex-grow">
                 {/* Header Bar with Gradient */}
                 <div className="w-full mb-12">
                     <div className="legacy-button !w-full !text-2xl !py-4 !px-10 cursor-default">
@@ -81,6 +82,7 @@ const Pedodonzia = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

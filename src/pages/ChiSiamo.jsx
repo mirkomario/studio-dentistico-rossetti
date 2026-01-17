@@ -1,15 +1,16 @@
 import React from 'react';
 import receptionImg from '../assets/imageReception.png';
 import SEO from '../components/SEO';
+import Footer from '../components/Footer';
 
 const ChiSiamo = () => {
     return (
-        <div className="flex flex-col items-center p-8">
+        <div className="flex flex-col items-center p-8 min-h-full">
             <SEO
                 title="Chi Siamo"
                 description="Scopri la storia e la filosofia dello Studio Dentistico Rossetti a Milano. Dal 1985 al servizio del tuo sorriso con passione e competenza."
             />
-            <div className="max-w-[1400px] w-full">
+            <div className="max-w-[1400px] w-full flex-grow">
                 {/* Header Bar with Gradient */}
                 <div className="w-full mb-12">
                     <div className="legacy-button !w-full !text-2xl !py-4 !px-10 cursor-default">
@@ -50,6 +51,7 @@ const ChiSiamo = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

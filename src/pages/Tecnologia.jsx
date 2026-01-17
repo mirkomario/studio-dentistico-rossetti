@@ -6,60 +6,41 @@ import tecn4 from '../assets/imageTecn4.png';
 import tecn5 from '../assets/imageTecn5.png';
 import tecn6 from '../assets/imageTecn6.png';
 import SEO from '../components/SEO';
+import Footer from '../components/Footer';
 
 const Tecnologia = () => {
     const techImages = [tecn1, tecn2, tecn3, tecn4, tecn5, tecn6];
 
     return (
-        <div className="flex flex-col items-center p-8">
+        <div className="flex flex-col items-center p-8 min-h-full">
             <SEO
                 title="Tecnologia"
                 description="Lo Studio Rossetti utilizza tecnologie all'avanguardia: scanner intraorali, impronte digitali e diagnosi 3D per la massima precisione."
             />
-            <div className="max-w-[1400px] w-full">
+            <div className="max-w-[1400px] w-full flex-grow">
                 {/* Header Bar with Gradient */}
-                <div className="w-full mb-12">
+                <div className="w-full mb-6">
                     <div className="legacy-button !w-full !text-2xl !py-4 !px-10 cursor-default">
                         TECNOLOGIA
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row gap-0 items-stretch">
+                <div className="flex flex-col md:flex-row gap-12 items-start justify-center">
                     {/* Text Column */}
-                    <div className="md:w-[30%] pr-10 flex flex-col justify-center">
-                        <p className="text-[#009EA9] text-2xl leading-relaxed italic font-serif text-left">
-                            Tutte le attrezzature<br />
-                            elettromedicali<br />
-                            e i dispositivi medici<br />
-                            utilizzati di ultima<br />
-                            generazione, conformi<br />
-                            alle direttive europee<br />
-                            del settore,<br />
-                            ne garantiscono<br />
-                            la massima qualità<br />
-                            e affidabilità<br />
-                            (direttive CEI/CEE)<br />
-                            e vengono sottoposti<br />
-                            periodicamente a verifiche<br />
-                            di sicurezza da tecnici<br />
-                            qualificati.
+                    <div className="md:w-[40%] flex flex-col pt-2">
+                        <p className="text-[#009EA9] text-xl leading-relaxed italic font-serif text-left">
+                            Tutte le attrezzature elettromedicali e i dispositivi medici utilizzati di ultima generazione, conformi alle direttive europee, ne garantiscono la massima qualità e affidabilità e vengono sottoposti periodicamente a verifiche di sicurezza.
                         </p>
-                        <p className="text-[#009EA9] text-2xl leading-relaxed italic font-serif text-left mt-12">
-                            Scanner intraorale<br />
-                            e occhiali 3D<br />
-                            per la rilevazione<br />
-                            di impronte digitali<br />
-                            in sostituzione<br />
-                            di quelle tradizionali<br />
-                            con cucchiaio e pasta.
+                        <p className="text-[#009EA9] text-xl leading-relaxed italic font-serif text-left mt-6">
+                            Scanner intraorale e occhiali 3D per la rilevazione di impronte digitali in sostituzione di quelle tradizionali.
                         </p>
                     </div>
 
-                    {/* Images Grid Column (Vertical/Portrait) */}
-                    <div className="md:w-[70%]">
-                        <div className="grid grid-cols-3 gap-6">
+                    {/* Images Grid Column */}
+                    <div className="md:w-[50%]">
+                        <div className="grid grid-cols-3 gap-3">
                             {techImages.map((src, index) => (
-                                <div key={index} className="aspect-[4/5] overflow-hidden rounded-sm shadow-sm">
+                                <div key={index} className="aspect-square overflow-hidden rounded-sm shadow-sm">
                                     <img
                                         src={src}
                                         alt={`Tecnologia ${index + 1}`}
@@ -71,6 +52,7 @@ const Tecnologia = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, Train, Car, Info, Navigation } from 'lucide-react';
 import SEO from '../components/SEO';
+import Footer from '../components/Footer';
 
 const Contatti = () => {
     const today = new Date().getDay(); // 0 = Sunday, 1 = Monday, etc.
@@ -18,7 +19,7 @@ const Contatti = () => {
                 title="Contatti e Sede"
                 description="Contatta lo Studio Dentistico Rossetti a Milano: Via Poggibonsi 5. Telefono 02.4071446. Orari, mappa e indicazioni per raggiungerci con i mezzi pubblici."
             />
-            <div className="max-w-[1200px] w-full flex flex-col gap-8">
+            <div className="max-w-[1200px] w-full flex flex-col gap-8 flex-grow">
                 {/* Header Bar with Gradient style */}
                 <div className="w-full mb-4">
                     <div className="legacy-button !w-full !text-2xl !py-4 !px-10 cursor-default">
@@ -157,28 +158,27 @@ const Contatti = () => {
                                 className="rounded-2xl"
                             ></iframe>
                             <div className="absolute top-8 right-8 pointer-events-none">
-                                <div className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-xl border border-[#009EA9]/20 shadow-lg pointer-events-auto hover:bg-white transition-colors">
-                                    <a
-                                        href="https://www.google.com/maps/dir/?api=1&destination=Studio+Medico+Dentistico+Associato+Rossetti+G.+e+P.,+Via+Poggibonsi+5,+20146+Milano"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-[#009EA9] text-xs font-black uppercase hover:underline flex items-center"
-                                    >
-                                        <Navigation className="w-3 h-3 mr-2" />
-                                        Pianifica Viaggio
-                                    </a>
-                                </div>
+                                <a
+                                    href="https://www.google.com/maps/dir/?api=1&destination=Studio+Medico+Dentistico+Associato+Rossetti+G.+e+P.,+Via+Poggibonsi+5,+20146+Milano"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-[#009EA9] text-white px-8 py-4 rounded-2xl shadow-[0_10px_30px_rgba(0,158,169,0.4)] hover:shadow-[0_15px_40px_rgba(0,158,169,0.6)] hover:scale-105 transition-all pointer-events-auto flex items-center group active:scale-95"
+                                >
+                                    <div className="bg-white/20 p-2 rounded-lg mr-4 group-hover:bg-white/30 transition-colors">
+                                        <Navigation className="w-6 h-6 animate-pulse group-hover:animate-none" />
+                                    </div>
+                                    <div className="flex flex-col items-start">
+                                        <span className="text-[10px] text-white/70 font-bold uppercase tracking-widest leading-none mb-1">Ottieni Indicazioni</span>
+                                        <span className="text-lg font-black uppercase tracking-tighter leading-none">Pianifica il Viaggio</span>
+                                    </div>
+                                </a>
                             </div>
                         </div>
 
                     </div>
                 </div>
 
-                {/* Bottom Notice */}
-                <div className="text-center text-gray-400 text-sm mt-8 py-8 border-t border-gray-100">
-                    <p>© {new Date().getFullYear()} Studio Medico Dentistico Associato G. & P. Rossetti - Via Poggibonsi 5, Milano</p>
-                </div>
-
+                <Footer />
             </div>
         </div>
     );

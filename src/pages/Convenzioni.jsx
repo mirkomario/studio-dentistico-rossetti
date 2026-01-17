@@ -1,6 +1,7 @@
 import React from 'react';
 import { CreditCard, Landmark, ShieldCheck, HeartPulse } from 'lucide-react';
 import SEO from '../components/SEO';
+import Footer from '../components/Footer';
 
 const Convenzioni = () => {
     const convenzioni = [
@@ -15,12 +16,12 @@ const Convenzioni = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center p-8">
+        <div className="flex flex-col items-center p-8 min-h-full">
             <SEO
                 title="Convenzioni e Finanziamenti"
                 description="Lo Studio Rossetti è convenzionato con i principali fondi sanitari e offre soluzioni di finanziamento Compass per le tue cure a Milano."
             />
-            <div className="max-w-[1400px] w-full">
+            <div className="max-w-[1400px] w-full flex-grow">
                 {/* Header Bar with Gradient */}
                 <div className="w-full mb-12">
                     <div className="legacy-button !w-full !text-2xl !py-4 !px-10 cursor-default">
@@ -65,6 +66,7 @@ const Convenzioni = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

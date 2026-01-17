@@ -38,12 +38,6 @@ const Sidebar = () => {
                     </NavLink>
                 ))}
             </nav>
-
-            <div className="mt-auto py-6 text-center">
-                <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
-                    Studio Medico Rossetti<br />Milano
-                </p>
-            </div>
         </aside>
     );
 };
